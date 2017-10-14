@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  rabbit-test:
+    image: harbur/rabbitmq-cluster
+    hostname: rabbit-test
+    environment:
+      - ERLANG_COOKIE=abcdefg
+    ports:
+      - "5672:5672"
+      - "15672:15672"
